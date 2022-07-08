@@ -1,0 +1,12 @@
+{
+    "document_dirs": [
+        "/Users/ravi/Work/Projects/Orbiwise/code/orbiwan-solution-documents/ow-resources-ejs-like/_site"
+    ],
+    "output_json_path": "/Users/ravi/Work/Projects/Orbiwise/code/orbiwan-solution-documents/search-server/owdocs.json",
+    "search_server_url": "http://127.0.0.1:7700",
+    "debug": true,
+    "search_index_name": "orbiwisedocs",
+    "port": 12123,
+    "search_provider_key": "this-S4@4cD-is-the-master-key-for-orbiwise-documentation-348sWcdP0",
+    "data_file": "owdocs.json"
+}

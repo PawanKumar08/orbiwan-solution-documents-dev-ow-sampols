@@ -1,0 +1,16 @@
+orbiwan
+orbiwiki
+.DS_Store
+.jekyll-cache
+/DASS
+Gemfile.lock
+
+
+build
+staged
+# ow-resources
+
+search-server/node_modules
+search-server/package-lock.json
+search-server/logs
+search-server/dist/*

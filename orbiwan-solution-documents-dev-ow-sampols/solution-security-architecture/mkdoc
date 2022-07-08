@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# You need to have pandoc 2.9.x minimum installed on the system
+#   you can get it here: https://github.com/jgm/pandoc/releases/tag/2.9.2.1
+# you also need pandoc-crossref for same version.
+#   you can get it here: https://github.com/lierdakil/pandoc-crossref/releases/tag/v0.3.6.2
+# you must have installed mermaid filter. That can be installed as:
+#   pip3 install pandoc-mermaid-filter
+# finally mermaid.cli need to be installed, but it is already installed in the tools directory. So just be sure you have
+# done npm install in the ../tools directory.
+
+OUTPUT_FILE=orbiwan-security-architecture
+
+PATH=./bin:../ow-doc-stack/node_modules/.bin:$PATH
+OWDOCSTACK=../ow-doc-stack
+
+mkdir -p tmp
+mkdir -p created-images
+
+export MERMAID_BIN="./node_modules/.bin/mmdc -s 2 -w 1600 -H 1200"
+export PLANTUML_BIN="java -jar ./bin/plantuml.jar"
+
+
+# node ./tools/preprocess -e global.docx=1,global.privacy=0 top_level_doc.md | pandoc --metadata-file=doc_pandoc.yaml -F pandoc-crossref  -toc -o orbiwise_doc_stack.pdf --filter peter_plantuml.js -f markdown -t pdf
+node $OWDOCSTACK/tools/preprocess -e global.docx=1,global.privacy=0 top_level_doc.md > $OUTPUT_FILE.md
+
+node $OWDOCSTACK/tools/preprocess -e global.docx=1,global.privacy=0 top_level_doc.md | pandoc --metadata-file=$OWDOCSTACK/doc_pandoc.yaml -F pandoc-crossref --reference-doc=$OWDOCSTACK/templates/orbiwise-ref-template.docx -o $OUTPUT_FILE.docx --filter $OWDOCSTACK/tools/figure-filter.js -f markdown -t docx

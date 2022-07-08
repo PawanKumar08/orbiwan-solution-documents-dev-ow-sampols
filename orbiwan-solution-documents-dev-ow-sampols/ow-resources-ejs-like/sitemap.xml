@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://127.0.0.1:4000/index.html</loc>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:4000/GettingStarted.html</loc>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:4000/application-management.html</loc>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:4000/aws-iot-core-integration.html</loc>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:4000/devices-management.html</loc>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:4000/gateway-management.html</loc>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:4000/rest.html</loc>
+    </url>
+</urlset>

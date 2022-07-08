@@ -1,0 +1,65 @@
+[
+    {
+        "objectID": "getting-started-login",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Getting Started",
+        "hierarchy_lvl2": "Login",
+        "content": "After the signup, you must have received an email with a one-time-usable-link to create your password. You can login on the instance URL mentioned in the email. The following screenshot shows how the login page looks like: Once you Sign in, you will see the Welcome page of OrbiWAN with the applicable menu, as shown in the image below:",
+        "url": "GettingStarted.html",
+        "anchor": "login"
+    },
+    {
+        "objectID": "getting-started-add-gateway",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Getting Started",
+        "hierarchy_lvl2": "Add Gateway",
+        "content": "In order to register your gateway(s) on the applicable OrbiWAN instance, you can proceed with the following simple steps: Navigate to Gateways menu –> Add Gateways.Enter the Gateway name and Select the model.Copy the command provide in Installation box to provision the gateway.Login to the gateway using SSH and paste the copied command in the gateway shell.This command will download the Gateway Software and install on the Gateway.Once the Software is installed, Reboot the gateway. You can also watch the video to see the gateway registration process in action: Once the gateway reboots it will come online in around 1-2 min, after which you will see the status as OK in the gateways dashboard as shown in the Figure below:",
+        "url": "GettingStarted.html",
+        "anchor": "add-gateway"
+    },
+    {
+        "objectID": "getting-started-add-device",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Getting Started",
+        "hierarchy_lvl2": "Add Device",
+        "content": "The Next step after registering your gateways is to register your devices. The devices can be registered via as OTAA (Over The Air Activation) or ABP (Activation by Personalization) activation mode.Below are the steps to add a device to your account: Navigate to Devices –> Manage Devices –> Add devices.An Add Device window will popup, enter the DevEUI, and an optional Comment.Select the Device Profile and Service Profile from the drop-down menu as seen below: To add Device via OTAA Activation mode, choose the Device Profile created for OTAA mode and enter the AppKey.To add Device via ABP Activation mode, choose the Device Profile created for ABP mode and enter the DevAddr, Nwkskey and Appskey Choose the applicable LoRaWAN Class either A or B or C Select the Activated option as Yes - this will enable the device to operate on the Network. Then click OK. The device will be registered as seen below:As soon as you’re done with registering your devices and gateways, you will be able to see each device send a join request to the network. Once the device joins the network, it can start sending the uplink messages.You can see each device’s payloads in Devices –> Select your device –> Action –> View Data.Clicking on the View Data button will open the Device Activity page where you can see all of the uplink and downlink messages of the selected device.",
+        "url": "GettingStarted.html",
+        "anchor": "add-device"
+    },
+    {
+        "objectID": "getting-started-add-app",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Getting Started",
+        "hierarchy_lvl2": "Add Application",
+        "content": "OrbiWAN offers you an option to push all uplinks to your designated application. To enable this feature, you need to add an application inside OrbiWAN. Once an application is in place and attached to a particular device, all this device’s payloads will be pushed to the particular application. To add an application follow the simple steps below: Navigate to the Applications menu –> Add Application  This will open Manage App which allows you to add an application. You need to enter an Account ID. The Push Settings tab allows the user to directly configure the application account to make push notification to the external application. Push notification are sent to an HTTP(S) server, the hostname and port number must be entered. The screenshot below shows the available fields for push the settings form. As seen in the screenshot: The Hostname is the DNS or IP of the external HTTP/HTTPS application.The Port must be entered if external application is using specific port.The Path prefix is the external application URL where the packets to be pushed, i.e /app2/ul/data from application URL (https://app.orbiwise.com/app2/ul/data)  In case the external application supports Authentication, OrbiWAN can be configured to use it to make connections.  Once you’re done adding the application, You need to start the application via Action –> Start Push which will start pushing all the payloads to the application.Although you have added the application it will only receive the data once the application is assigned to the device(s). The next section will help you to assign application to devices.",
+        "url": "GettingStarted.html",
+        "anchor": "add-application"
+    },
+    {
+        "objectID": "getting-started-assign-app",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Getting Started",
+        "hierarchy_lvl2": "Assign Application",
+        "content": "Once you have created an application account, you need to assign this application to the particular device(s) this application is assigned to:  Navigate to Devices -> Action -> App Assignment     Select the created Application       Click on Add button as below:   Once your application is assigned to the device, OrbiWAN will start pushing the real time traffic to your assigned application.  You can also watch the following video to see the Application Management process in action:",
+        "url": "GettingStarted.html",
+        "anchor": "assign-application"
+    },
+    {
+        "objectID": "app-management",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Application Management",
+        "hierarchy_lvl2": null,
+        "content": "In order to register your gateway(s) on the applicable OrbiWAN instance, you can proceed with the following simple steps: Navigate to Gateways menu –> Add Gateways.Enter the Gateway name and Select the model.Copy the command provide in Installation box to provision the gateway.Login to the gateway using SSH and paste the copied command in the gateway shell.This command will download the Gateway Software and install on the Gateway.Once the Software is installed, Reboot the gateway. You can also watch the video to see the gateway registration process in action: Once the gateway reboots it will come online in around 1-2 min, after which you will see the status as OK in the gateways dashboard as shown in the Figure below:",
+        "url": "application-management.html",
+        "anchor": "application-management"
+    },
+    {
+        "objectID": "app-management-creating-app-from-ui",
+        "hierarchy_lvl0": "Documentation",
+        "hierarchy_lvl1": "Application Management",
+        "hierarchy_lvl2": "Creating Application From UI",
+        "content": "In order to register your gateway(s) on the applicable OrbiWAN instance, you can proceed with the following simple steps: Navigate to Gateways menu –> Add Gateways.Enter the Gateway name and Select the model.Copy the command provide in Installation box to provision the gateway.Login to the gateway using SSH and paste the copied command in the gateway shell.This command will download the Gateway Software and install on the Gateway.Once the Software is installed, Reboot the gateway. You can also watch the video to see the gateway registration process in action: Once the gateway reboots it will come online in around 1-2 min, after which you will see the status as OK in the gateways dashboard as shown in the Figure below:",
+        "url": "application-management.html",
+        "anchor": "creating-application-from-ui"
+    }
+]

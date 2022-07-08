@@ -1,0 +1,43 @@
+<header>
+    <div id="mobile-menu">
+        <div id="nav-button" class="fa fa-bars fa-2x button"></div>
+    </div>
+    <section id="logo">
+        <a href="index.html" class="orbiwise">
+            <img src="images/logo-white.png" alt="OrbiWise" />
+
+        </a>
+    </section>
+    <div id="navbar" >
+    <span class="logo-subtext" >Sampols 2.2</span>
+    <!--    <input class="hidden" id="orbiwise-doc-search" placeholder="🔎 search">  Hide search option -->
+        <ul id="navmenu" class="hidden" >
+            {%- assign allPages = site.pages | sort: "order" -%}
+            
+            {%- for p in allPages -%}
+                {%- if p.title and p.page_type == "top" -%}
+                    {%- if  p.visible != false  -%}
+                        {%- if  p.sub_pages == true  -%}
+                            <li>  
+                                <ul id="{{p.menu}}-menu" class="menu ow-menu">
+                                    <li><a href="#" id="{{p.menu}}-menu" {% if p.menu==page.menu %} class="active" {% endif %}>{{p.title}}</a>
+                                        <ul>
+                                            {%- assign parent_page_id = p.menu -%}
+                                            {%- for p2 in site.pages -%}
+                                            {%- if p2.page_type == "sub-page" and p2.menu == parent_page_id and p2.visible != false -%}
+                                                <li id='{{p2.title | remove:" "}}' ><a href="{{p2.permalink}}">{{p2.title}}</a></li>
+                                            {%- endif -%}        
+                                            {%- endfor -%}
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        {%- else if p.sub_pages == false -%}
+<!--                            <li><a href="{{p.permalink}}" id="{{p.menu}}-menu" {% if p.menu==page.menu %} class="active" {% endif %}>{{p.title}}</a></li> -->
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    </div>
+</header>
